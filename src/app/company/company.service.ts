@@ -17,7 +17,7 @@ export class CompanyService {
   }
 
   loadCompanies() {
-    return this.http.get(`${this.API_BASE}/company`)
+    return this.http.get(`../assets/data.json`)
       .map(data => data.json())
       .catch(this.errorHandler)
   }

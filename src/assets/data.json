@@ -1,0 +1,43 @@
+[
+    {
+        "subHHId": 1,
+        "name": "Bob brain family",
+        "member": {
+            "mp1": {
+                "mpId": "mp1",
+                "firstName": "Bob",
+                "lastName": "Brian",
+                "displayName": "Bob-Brian",
+                "dob": "2008-01-01T00:00:0Z",
+                "directlyAdded": true
+            },
+            "mp2": {
+                "mpId": "mp2",
+                "firstName": "Danny",
+                "lastName": "Clown",
+                "displayName": "Danny-Clown",
+                "dob": "2002-08-01T00:00:0Z",
+                "directlyAdded": true
+            },
+            "mp3": {
+                "mpId": "mp3",
+                "firstName": "Robert Langdon",
+                "lastName": "LAngdon",
+                "displayName": "Robert-Langdon",
+                "dob": "2002-08-01T00:00:0Z",
+                "directlyAdded": true
+            }
+        },
+        "accounts": {
+            "a1": {
+                "accountId": "a1",
+                "accountNumber": "DB1093746",
+                "accountOwners": [
+                    "mp1",
+                    "mp3"
+                ],
+                "directlyAdded": false
+            }
+        }
+    }
+]

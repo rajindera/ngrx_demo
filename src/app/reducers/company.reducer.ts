@@ -12,8 +12,16 @@ const initialState: State = {
 export function companyReducer(state = initialState, action: fromCompanies.Actions): State {
     switch (action.type) {
         case fromCompanies.LOAD_COMPANIES_SUCCESS: {
+            let arr = action.payload;
+            var members = [];
+            arr.forEach(e => {
+                Object.keys(e["member"]).forEach(k => {
+                    members.push(e["member"][k]);
+                }
+                )
+            });
             return state = {
-                companies: action.payload
+                companies: members
             };
         }
         case fromCompanies.DELETE_COMPANY_SUCCESS: {
