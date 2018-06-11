@@ -1,20 +1,13 @@
 <form [formGroup]="companyForm" novalidate>
   <div class="form-group">
-    <label for="name">Name</label>
-    <input type="text" class="form-control" name="name" formControlName="name">
+    <label for="name">Sub Household Name*</label>
+    <input type="text" class="form-control" name="name" formControlName="name" placeholder="New Sub Household">
     <div class="alert alert-danger" *ngIf="companyForm.get('name').hasError('required') && companyForm.get('name').touched">
       Name is required
     </div>
   </div>
   <div class="form-group">
-    <label for="email">Email</label>
-    <input type="text" class="form-control" name="email" formControlName="email">
-  </div>
-  <div class="form-group">
-    <label for="phone">Phone</label>
-    <input type="text" class="form-control" name="phone" formControlName="phone">
-  </div>
-  <div class="form-group">
-    <button class="btn btn-default" [disabled]="companyForm.invalid" (click)="saveCompany()">Submit</button>
+    <button class="btn btn-default" [disabled]="companyForm.invalid" (click)="saveCompany()">Save</button>
+    <button class="btn btn-default" [disabled]="companyForm.invalid" (click)="cancel()">Cancel</button>
   </div>
 </form>
